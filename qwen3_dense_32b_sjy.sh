@@ -7,11 +7,11 @@ swift sft \
     --train_type full \
     --dataset '/mnt/bn/capcut-search/caomingxiang/ai_search/ai/data/train_4k.jsonl' \
     --torch_dtype bfloat16 \
-    --num_train_epochs 3 \
-    --max_epochs 3 \
+    --num_train_epochs 10 \
+    --max_epochs 10 \
     --per_device_train_batch_size 1 \
     --per_device_eval_batch_size 1 \
-    --learning_rate 1e-5 \
+    --learning_rate 1e-6 \
     --gradient_accumulation_steps 2 \
     --packing true \
     --save_steps 50 \
@@ -24,7 +24,7 @@ swift sft \
     --save_total_limit 2 \
     --split_dataset_ratio 0.1 \
     --save_only_model true \
-    --output_dir /mnt/bn/capcut-search/caomingxiang/ai_search/qwen3-32b_dense_train/output/Qwen3-dense-32B \
+    --output_dir /mnt/bn/capcut-search/caomingxiang/ai_search/qwen3-32b_dense_train/output/Qwen3-dense-32B-sjy \
     --deepspeed zero3 \
     --report_to wandb \
     --use_liger_kernel true \
